@@ -1,0 +1,17 @@
+name: phys-223
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - scipy
+  - jupyter
+  - jupyterlab
+  - ipywidgets
+  - qiskit
+  - qiskit-aer
+  - qiskit-ibmq-provider
+  - qutip
+  
