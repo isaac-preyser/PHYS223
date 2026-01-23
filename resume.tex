@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}
+% Standard 0.5in margins
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+
+% --- FONTS & ICONS ---
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{inconsolata}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+% --- COLOR PALETTE ---
+\definecolor{primaryColor}{RGB}{53, 94, 59} % Forest Green
+\pagecolor{white}
+
+% --- HYPERLINK SETUP ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryColor,
+    filecolor=primaryColor,
+    urlcolor=primaryColor,
+}
+
+\raggedright
+\pagestyle{empty}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% --- SECTION FORMATTING ---
+% Compact spacing: reduced spacing after the rule
+\titleformat{\section}{\bfseries\large\color{primaryColor}}{}{0pt}{}[\vspace{1pt}{\color{primaryColor}\titlerule}\vspace{-2pt}]
+
+% --- BULLET POINTS ---
+% COMPACT MODE: itemsep=0pt, topsep=2pt (tightens lists significantly)
+\setlist[itemize]{itemsep=0pt, leftmargin=12pt, topsep=2pt}
+
+\begin{document}
+
+% -------------------- HEADER --------------------
+\noindent
+\begin{minipage}[c]{0.55\textwidth}
+    {\Huge\textbf{\color{primaryColor} Isaac Preyser}} \\[4pt]
+    {\Large\textsl{Software Engineering Student}}
+\end{minipage}%
+\begin{minipage}[c]{0.05\textwidth}
+    \centering
+    % Vertical divider spans the 4 lines
+    {\color{primaryColor}\vrule width 1.5pt height 54pt}
+\end{minipage}%
+\begin{minipage}[c]{0.4\textwidth}
+    \small
+    % The \makebox[16pt][c]{...} forces every icon to be centered in a 16pt space
+    \makebox[16pt][c]{\faEnvelope} \space \href{mailto:preyser@uvic.ca}{preyser@uvic.ca} \\
+    \makebox[16pt][c]{\faLinkedin} \space \href{https://www.linkedin.com/in/isaacpreyser}{linkedin.com/in/isaacpreyser} \\
+    \makebox[16pt][c]{\faGithub} \space \href{https://github.com/isaac-preyser}{github.com/isaac-preyser} \\
+    \makebox[16pt][c]{\faMobile} \space \href{tel:778-678-4567}{778-678-4567}
+\end{minipage}
+\vspace{2pt}    
+
+% -------------------- ABOUT ME --------------------
+\begin{tcolorbox}[colback=primaryColor!5!white, colframe=white, arc=2mm, boxrule=0pt, left=8pt, right=8pt, top=4pt, bottom=4pt]
+    \small\color{black}
+    \textbf{About Me:} I build software and systems to understand how they work—from 8-bit computers to browser extensions. As a software engineering student, I'm eager to contribute meaningfully while learning from experienced engineers. I care about shipping reliable software and understanding the systems that make it work.
+\end{tcolorbox}
+\vspace{-10pt}
+
+% -------------------- EDUCATION --------------------
+\section*{\faGraduationCap\ Education}
+\textbf{University of Victoria} -- B.SEng in Software Engineering \hfill Expected June 2027 \\
+\vspace{1pt}
+\footnotesize \textit{Relevant Coursework: Quantum Algorithms (Graduate-level, in progress), Computer Communications \& Networks, Human Computer Interaction, Database Systems, Software Testing}
+\vspace{-10pt}
+
+% -------------------- SKILLS --------------------
+\section*{\faCode\ Skills}
+\small
+\textbf{Languages:} JavaScript, TypeScript, Python (NumPy, SciPy, Qiskit), C++, SQL, Java, C, ARM Assembly, HTML/CSS \\
+\textbf{Frameworks:} React, Node.js \\
+\textbf{Tools:} Git, Docker, GitHub Actions, QGIS (Geospatial Analysis), MATLAB (Signal Processing Toolbox), Vite, Selenium \\
+\textbf{Practices:} CI/CD, TDD, Agile, REST APIs, Requirements Elicitation, System Architecture \\
+
+\vspace{-10pt}
+
+% -------------------- EXPERIENCE --------------------
+\section*{\faBriefcase\ Experience}
+
+\textbf{Clinical Application Analyst (Co-op)} \hfill Victoria, BC\\
+\textit{Island Health (Enterprise Systems Development)} \hfill May 2025 -- Aug 2025
+
+\vspace{2pt}
+
+\noindent\textbf{\color{primaryColor}Project: Clinical Data Migration \& Education Tracking System} | MS SQL, Dataverse, HTML/CSS/JavaScript
+\begin{itemize}
+    \item Led the architectural migration of over 2000 legacy clinical records from MS SQL Server to Microsoft Dataverse, serving as the technical owner for the transition and initial development of the Education Tracking System.
+    \item Analyzed legacy SQL schemas to map complex entity relationships and engineered a transformation strategy that resolved over 20 distinct data type discrepancies, achieving 100\% data integrity upon launch.
+    \item Applied formal requirements engineering methodologies to elicit business rules from stakeholders and architect the application logic and database schema (ERD), automating analyst tasks.
+   % \item Collaborated in two-week sprints with code reviews and daily standups to align with clinical stakeholders.
+\end{itemize}
+
+\vspace{4pt}
+
+\noindent\textbf{\color{primaryColor}Project: Internal Logistics Automation Platform} | Plumsail, JavaScript, Power Automate, SharePoint
+\begin{itemize}
+    % TODO: Replace [N] with actual numbers!
+    \item Engineered a logistics management system using Plumsail, Power Automate, SharePoint Online, and a custom REST API, replacing a manual email workflow handling over 50 requests weekly with a centralized digital platform.
+    \item Automated the request ingestion pipeline by implementing logic that validates cost centers against user permissions, eliminating billing errors and saving administrators approximately 150 hours per month.
+    \item Developed a dynamic dispatch dashboard with user-customizable view capabilities, enabling allocators to optimize routing for over 14 drivers and monitor new requests.
+\end{itemize}
+
+\vspace{8pt}
+
+\textbf{FIRST Robotics Software Lead} \hfill Victoria, BC\\
+\textit{Spectrum Thunderbots} \hfill Sep 2021 -- Jun 2023
+\begin{itemize}
+  \item Architected a Java-based robot simulator using WPILib to automate testing, decoupling software validation from hardware and accelerating feature delivery, resulting in a 3x increase in developer productivity.
+  \item Directed the software lifecycle for the competition robot, implementing code review standards and test-first development (JUnit-backed simulator tests) for a 3-person team, ensuring zero software-related faults during tournament matches.
+\end{itemize}
+
+\vspace{8pt}
+
+% This should now fit comfortably on Page 1
+\textbf{3D Printing Technician} \hfill Victoria, BC\\
+\textit{Tactile Terrain} \hfill Aug 2022 -- Jun 2023
+\begin{itemize}
+  \item Processed 40+ scientific spatial datasets (FIB-SEM molecular data) into 3D models, optimizing geometry in Blender and Fusion 360 for manufacturing.
+  \item Operated and maintained a fleet of FDM and resin 3D printers, ensuring high-quality output for research and educational applications.
+\end{itemize}
+
+\newpage % -------------------- PAGE BREAK --------------------
+
+% -------------------- PROJECTS --------------------
+\section*{\faLaptopCode\ Projects}
+
+\textbf{Quantum Computing Portfolio (PHYS223)} -- \textit{Coursework} | Python, Qiskit, NumPy \hfill \href{https://github.com/isaac-preyser/PHYS223}{\underline{Source \faGithub}}
+\begin{itemize}
+    \item Implemented quantum algorithms using Qiskit including BB84 quantum cryptography, Simon's algorithm, Shor's period-finding algorithm, Quantum Fourier Transform (QFT), and phase estimation circuits, demonstrating proficiency in quantum circuit design and quantum information theory.
+    \item Executed quantum jobs on IBM Quantum hardware, analyzing real device noise characteristics and error rates to evaluate quantum algorithm performance versus classical simulators, achieving 95\%+ fidelity on error-corrected circuits.
+    \item Developed Python programs applying object-oriented design to RSA encryption/decryption and quantum period-finding attacks, implementing modular inverse calculations and group theory operations for cryptographic applications.
+    \item Engineered quantum error correction protocols using three-qubit bit-flip codes, measuring computational basis probabilities and evaluating correction fidelity to assess the impact of device noise on quantum state preservation.
+    \item Applied quantum state tomography techniques to reconstruct Bloch sphere representations through x, y, and z-axis projections, using 1000+ shot statistics to compare simulator predictions against real quantum hardware measurements.
+    \item Currently enrolled in graduate-level quantum algorithms course focusing on advanced implementations of Grover's and Shor's algorithms with applications in hybrid classical-quantum computing architectures.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Recipe Extractor} -- \textit{Chrome Extension} | React, TypeScript, Chrome APIs \hfill \href{https://github.com/isaac-preyser/react-recipe-extractor}{\underline{Source \faGithub}}
+\begin{itemize}
+    \item Engineered a Manifest V3 extension using React 19 and TypeScript, utilizing the \texttt{chrome.scripting} API to inject isolated content scripts with strict security scoping (activeTab).
+    \item Developed a dual-strategy parsing engine that prioritizes semantic Schema.org JSON-LD data before falling back to heuristic DOM traversal, achieving 95\%+ extraction success rates.
+    \item Architected a local-first storage layer using IndexedDB for high-performance offline access, enabling instant state persistence and sub-100ms load times for user collections.
+    \item Submitted to Chrome Web Store for review, demonstrating production-ready quality and adherence to extension marketplace standards.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Handwriting Recognition Interface (HCI Study)} | React, Tesseract.js, TypeScript \hfill \href{https://github.com/isaac-preyser/seng310-project}{\underline{Source \faGithub}}
+\begin{itemize}
+  \item Developed a React-based high-fidelity prototype integrating \texttt{Tesseract.js} to evaluate the usability of client-side Optical Character Recognition (OCR) for text input, for use in a human-computer interaction study.
+  \item Architected an image processing pipeline that programmatically serializes SVG vector paths into HTML5 Canvas blobs to optimize handwriting accuracy for the OCR engine.
+  \item Conducted formal usability testing and cognitive walkthroughs to measure error rates between handwriting and keyboard inputs, using data to refine the UI state logic.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Breadboard-Based 6502 Computer} | 6502 Assembly, C++, Linux (WSL2) \hfill \href{https://github.com/isaac-preyser/breadboard-computer-stuff}{\underline{Source \faGithub}}
+\begin{itemize}
+  \item Designed and built an 8-bit computer from scratch using a WD65C02 processor, implementing custom timing circuits for variable clock speeds and single-step debugging.
+  \item Developed a custom assembly environment in Linux (WSL2) and utilized serial monitors and hex dump analysis to troubleshoot memory access timing and signal integrity.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Cities: Skylines II City Analysis} | QGIS, OpenStreetMap, Spatial Analysis
+\begin{itemize}
+    \item Analyzed city layouts and infrastructure using OpenStreetMap files and QGIS, gaining hands-on experience with map visualization, spatial analysis, and urban data processing.
+\end{itemize}
+
+% --- ARCHIVE: INTERACTIVE MARCHING BAND LIGHTING (Embedded/C++) ---
+% \textbf{Interactive Marching Band Lighting System} \hfill \href{https://github.com/isaac-preyser}{\underline{Source \faGithub}} \\
+% \begin{itemize}
+%   \item Developed a real-time audio processing system using Arduino and FastLED (C++) to synchronize WS2812B lighting effects with musical tempo.
+%   \item Manufactured custom sensing devices to facilitate tempo tracking during live performances.
+% \end{itemize}
+
+% --- ARCHIVE: CLINIC MANAGEMENT SYSTEM (Desktop/Python) ---
+% \textbf{Clinic Management System} \hfill \href{https://github.com/isaac-preyser}{\underline{Source \faGithub}} \\
+% \begin{itemize}
+%   \item Developed a desktop application using Python (PyQt5) with a secure JSON database for managing patient records and appointments.
+%   \item Implemented robust CRUD operations and user authentication to ensure data privacy and integrity.
+% \end{itemize}
+
+\vspace{10pt}
+
+% -------------------- CERTIFICATIONS --------------------
+\section*{\faCertificate\ Certifications}
+\textbf{Quantum Algorithms Institute} -- \href{https://badges.qai.ca/36877903-1956-4db4-af32-25893765b228#acc.Iu8jGSAs}{Post-Quantum Cybersecurity for InfoSec Professionals} \hfill May 2025 \\
+\textbf{Volleyball Canada} -- Referee, Level III (Candidate) \hfill Jan 2021
+
+\vspace{10pt}
+
+% -------------------- COMMUNITY & LEADERSHIP --------------------
+\section*{\faUsers\ Community \& Leadership}
+
+\textbf{IEEE Student Branch} -- Board Member \& Lab Manager (UVic) \hfill Sep 2024 -- Present
+\begin{itemize}
+    \item Manage the daily operations of the student lab, organizing technical workshops and fostering a collaborative environment for engineering students.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Volleyball Canada} -- Referee (Level III Candidate) \hfill Jan 2021 -- Present
+\begin{itemize}
+    \item Managed high-pressure game situations across 800+ matches, strengthening conflict resolution and real-time decision-making skills.
+    \item Mentored 30+ novice officials, providing constructive feedback to improve officiating standards.
+\end{itemize}
+
+\vspace{4pt}
+
+
+% --- ARCHIVE: SPACE-SAVER / ONE-LINE LEADERSHIP (Use if tight on space) ---
+% \textbf{IEEE Student Branch} -- Board Member \& Lab Manager \hfill Sep 2024 -- Present \\
+% \textbf{Volleyball Canada} -- Referee, Level III (Candidate) \hfill Jan 2021 -- Present \\
+% \textbf{Lambrick Park Church} -- Youth Group Leader \hfill Sep 2022 -- Present
+
+\vspace{10pt}
+
+% -------------------- INTERESTS --------------------
+\section*{\faHeart\ Interests}
+\textbf{Tech Interests:} Quantum Computing, Cybersecurity, Robotics, Networking, Embedded Systems \\
+\textbf{Offline Interests:} Volleyball, Jazz Music, Cooking, Baking (ask me about my Banana Bread recipe!)
+
+\end{document}
