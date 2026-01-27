@@ -3,6 +3,8 @@
 ## Overview
 This repository documents my progression through **PHYS223: Introduction to Quantum Computing** at the University of Victoria. Over the span of 3+ months (January 2025 - April 2025), I transformed from foundational quantum mechanics understanding to implementing production-grade quantum algorithms on IBM quantum hardware.
 
+> Find my current Quantum Algorithms work in SENG447/CSC557 in [this repository](https://github.com/isaac-preyser/SENG457). 
+
 ---
 
 ## Chapter 1: Foundations (Early February 2025)
